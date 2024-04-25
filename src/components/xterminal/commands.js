@@ -9,10 +9,6 @@ export let commands = {
     f: (terminal) => commandHelp(terminal),
     description: 'Print available commands',
   },
-  about: {
-    f: (terminal) => commandAbout(terminal),
-    description: 'About Md Obydullah',
-  },
   // ls: {
   //   f: (terminal) => {
   //     Object.keys(commands).forEach(key => {
@@ -29,5 +25,9 @@ export let commands = {
       terminal.prompt()
     },
     description: 'Clear the terminal'
+  },
+  about: {
+    f: (terminal) => commandAbout(terminal),
+    description: 'About Md Obydullah',
   },
 };
