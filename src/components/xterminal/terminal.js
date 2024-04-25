@@ -14,7 +14,7 @@ export async function startServer(terminal) {
   const messages = [
     {text: 'Welcome\r\n', delay: 0},
     {text: 'Starting the server...\r\n', delay: 200},
-    {text: 'Try running `help` command\r\n\r\n', delay: 700},
+    {text: 'Try running `help` or `ls` command\r\n\r\n', delay: 700},
     {text: userInfo(), delay: 100},
   ];
 

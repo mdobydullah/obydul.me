@@ -65,6 +65,6 @@ export function commandHelp(terminal) {
 export function commandAbout(terminal) {
   terminal.writeln(`${color('yellow', 'Md Obydullah')} is a software engineer, server administrator, ethical hacker and enthusiastic problem solver🚀  from Bangladesh.`)
   terminal.writeln(`He is currently working at \x1b]8;;https://www.electronicfirst.com\x07Electronic First\x1b]8;;\x07 as a ${color('green', 'Senior Software Engineer')}.`)
-  terminal.writeln("Follow him on \x1b]8;;https://twitter.com/0xObydul\x07X (Twitter)\x1b]8;;\x07 to know about his recent activities.")
+  terminal.writeln("Follow him on \x1b]8;;https://x.com/0xObydul\x07X (Twitter)\x1b]8;;\x07 to know about his recent activities.")
   terminal.prompt()
 }

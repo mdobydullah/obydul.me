@@ -1,7 +1,8 @@
 'use client'
 import React, {useEffect} from 'react';
 import {Terminal} from "@xterm/xterm";
-import {FitAddon} from "xterm-addon-fit";
+import {FitAddon} from "@xterm/addon-fit";
+import {WebLinksAddon} from '@xterm/addon-web-links';
 
 import {callWithDelay, runCommand, startServer} from './terminal';
 
@@ -17,18 +18,20 @@ export default function XTerminal() {
       fontSize: 14,
       fontFamily: 'Ubuntu Mono, courier-new, courier, monospace'
     });
+    terminal.open(terminalRef.current);
+    terminal.options.scrollback = 5000;
 
-    const fitAddon = new FitAddon();
+    let fitAddon = new FitAddon();
     terminal.loadAddon(fitAddon);
+    fitAddon.fit();
+    terminal.loadAddon(new WebLinksAddon());
+
+    window.onresize = callWithDelay(fitToScreen, 50);
 
     function fitToScreen() {
       fitAddon.fit();
-      // console.log(terminal.cols, terminal.rows);
+      console.log(terminal.cols, terminal.rows);
     }
-
-    window.onresize = callWithDelay(fitToScreen, 50);
-    terminal.open(terminalRef.current);
-    terminal.options.scrollback = 5000;
 
     terminal.prompt = function () {
       terminal.write("\r\n" + "$ ");
