@@ -47,6 +47,12 @@ export function commandHelp(terminal) {
         remaining = remaining.substring(splitIndex);
       }
     }
+
+    // if name contains string "gap", then replace with space
+    if (name.includes('gap')) {
+      name = "";
+    }
+
     const message = (
       `  \x1b[36;1m${name.padEnd(padding)}\x1b[0m ${d[0]}` +
       d.slice(1).map(e => `\r\n  ${' '.repeat(padding)} ${e}`)
@@ -84,5 +90,12 @@ export function commandAbout(terminal) {
   terminal.writeln(`${color('yellow', 'Md Obydullah')} is a software engineer, server administrator, ethical hacker and enthusiastic problem solver🚀  from Bangladesh.`)
   terminal.writeln(`He is currently working at \x1b]8;;https://www.electronicfirst.com\x07Electronic First\x1b]8;;\x07 as a ${color('green', 'Senior Software Engineer')}.`)
   terminal.writeln("Follow him on \x1b]8;;https://x.com/0xObydul\x07X (Twitter)\x1b]8;;\x07 to know about his recent activities.")
+  terminal.prompt()
+}
+
+export function commandRepo(terminal) {
+  terminal.writeln("You can find the source code of this project on \x1b]8;;https://github.com/mdobydullah/obydul.me\x07GitHub\x1b]8;;\x07.")
+  terminal.writeln("Pleas star the repository if you like it! 🤩")
+  terminal.writeln("If you have any suggestions or improvements, feel free to open an issue or a pull request. 🚀")
   terminal.prompt()
 }

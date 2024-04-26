@@ -1,4 +1,4 @@
-import {commandAbout, commandHelp, commandSocial, userInfo} from './methods.js';
+import {commandAbout, commandHelp, commandRepo, commandSocial, userInfo} from './methods.js';
 
 export let commands = {
   help: {
@@ -26,7 +26,7 @@ export let commands = {
     },
     description: 'Clear the terminal'
   },
-  '': {
+  gap1: {
     description: ' ',
   },
   social: {
@@ -36,5 +36,12 @@ export let commands = {
   about: {
     f: (terminal) => commandAbout(terminal),
     description: 'About Md Obydullah',
+  },
+  gap2: {
+    description: ' ',
+  },
+  repo: {
+    f: (terminal) => commandRepo(terminal),
+    description: 'Star and fork this repo',
   },
 };
