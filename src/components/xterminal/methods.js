@@ -19,6 +19,26 @@ export function commandHelp(terminal) {
   terminal.prompt()
 }
 
+export function commandSkills(terminal) {
+  let skills = {
+    'Languages': 'C, Java, JavaScript, PHP, Python, Go, Shell',
+    'Frameworks': 'Laravel, Django',
+    'Mobile App': 'Android Studio, Flutter',
+    'Databases': 'MySQL, MariaDB, MongoDB, Redis',
+    'Cloud': 'AWS, DigitalOcean, Linode, Vultr',
+    'AWS': 'EC2, S3, RDS, SES, Load Balancer, Auto Scaling, CloudWatch, CodeDeploy, WAF, ...',
+    'Tools': 'Git, Docker, PHPStorm, DataGrip, PyCharm, GoLand, VS Code, Postman, ...',
+    'Security': 'Anyxel Spider, Kali Linux, Parrot OS, Burp Suite, Metasploit, Nmap, SQLMap, Wireshark, ...',
+  }
+
+  terminal.writeln("Overview of my skills:\r\n")
+  for (let key in skills) {
+    let message = `  ${color('blue', key.padEnd(15))} ${skills[key]}`;
+    terminal.writeln(message)
+  }
+  terminal.prompt()
+}
+
 export function commandProjects(terminal) {
   let projects = {
     ef: {
