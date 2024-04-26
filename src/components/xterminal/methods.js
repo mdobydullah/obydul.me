@@ -1,17 +1,5 @@
 import {commands} from './commands.js';
-
-export function color(color, text) {
-  let code = 0;
-
-  if (color === 'red') code = 31;
-  if (color === 'green') code = 32;
-  if (color === 'yellow') code = 33;
-  if (color === 'blue') code = 34;
-  if (color === 'magenta') code = 35;
-  if (color === 'cyan') code = 36;
-
-  return `\x1B[${code};1m${text}\x1B[0m`;
-}
+import {color, link} from './lib.js';
 
 export function userInfo() {
   return '# \x1B[1;32mUser\x1B[0m in \x1B[1;33m~/obydul.me\x1B[0m \r\n';
@@ -24,10 +12,40 @@ export function commandHelp(terminal) {
   }
 
   terminal.writeln([
-    'Welcome to obydul.me! Try some of the commands below.',
+    'Welcome to obydul.me! Try some of the commands below:',
     '',
     ...Object.keys(commands).map(e => formatMessage(e, commands[e].description))
   ].join('\n\r'));
+  terminal.prompt()
+}
+
+export function commandProjects(terminal) {
+  let projects = {
+    ef: {
+      name: 'Electronic First',
+      description: `An e-commerce platform for digital products. ${link('https://www.electronicfirst.com', '[live preview]')}`,
+    },
+    anyxel: {
+      name: 'Anyxel',
+      description: `A platform for ethical hackers and bug bounty hunters. ${link('https://anyxel.com', '[live preview]')}`,
+    },
+    anyxelSpider: {
+      name: 'Anyxel Spider',
+      description: `A free, open-source ethical hacking environment and vulnerability scanner. ${link('https://spider.anyxel.com', '[live preview]')}`,
+    },
+    shouts: {
+      name: 'Shouts.dev',
+      description: `A dev community and blogging platform. ${link('https://shouts.dev', '[live preview]')}`,
+    },
+  }
+
+  terminal.writeln("My remarkable projects:\r\n")
+  for (let key in projects) {
+    let project = projects[key];
+
+    let message = `  ${color('blue', project.name.padEnd(20))} ${project.description}`;
+    terminal.writeln(message)
+  }
   terminal.prompt()
 }
 
@@ -41,22 +59,18 @@ export function commandSocial(terminal) {
     'More': 'https://bio.link/obydul',
   };
 
-  const formatMessage = (name, url) => {
-    return `  ${color('blue', name.padEnd(10))} ${url}`;
-  }
-
   terminal.writeln("You can follow me on social media.\r\n")
   Object.entries(socialLinks).forEach(([name, url]) => {
-    terminal.writeln(formatMessage(name, url))
+    let message = `  ${color('blue', name.padEnd(10))} ${url}`;
+    terminal.writeln(message)
   })
-
   terminal.prompt()
 }
 
 export function commandAbout(terminal) {
   terminal.writeln(`${color('yellow', 'Md Obydullah')} is a software engineer, server administrator, ethical hacker and enthusiastic problem solver🚀  from Bangladesh.`)
   terminal.writeln(`He is currently working at \x1b]8;;https://www.electronicfirst.com\x07Electronic First\x1b]8;;\x07 as a ${color('green', 'Senior Software Engineer')}.`)
-  terminal.writeln("Follow him on \x1b]8;;https://x.com/0xObydul\x07X (Twitter)\x1b]8;;\x07 to know about his recent activities.")
+  terminal.writeln(`Follow him on ${link('https://x.com/0xObydul', 'X (Twitter)')} to know about his recent activities.`)
   terminal.prompt()
 }
 

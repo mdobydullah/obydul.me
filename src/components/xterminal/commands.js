@@ -1,4 +1,4 @@
-import {commandAbout, commandHelp, commandRepo, commandSocial, userInfo} from './methods.js';
+import {commandAbout, commandHelp, commandProjects, commandRepo, commandSocial, userInfo} from './methods.js';
 
 export let commands = {
   help: {
@@ -28,7 +28,7 @@ export let commands = {
     description: ' ',
   },
   projects: {
-    f: (terminal) => commandSocial(terminal),
+    f: (terminal) => commandProjects(terminal),
     description: 'Projects I have worked on',
   },
   social: {
