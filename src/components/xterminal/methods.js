@@ -61,8 +61,8 @@ export function commandAbout(terminal) {
 }
 
 export function commandRepo(terminal) {
-  terminal.writeln("You can find the source code of this project on \x1b]8;;https://github.com/mdobydullah/obydul.me\x07GitHub\x1b]8;;\x07.")
-  terminal.writeln("Pleas star the repository if you like it! 🤩")
-  terminal.writeln("If you have any suggestions or improvements, feel free to open an issue or a pull request. 🚀")
+  terminal.writeln("You can find the source code of this project on GitHub. Pleas star the repository if you like it!🤩  If you have any suggestions or improvements, feel free to open an issue or a pull request. 🚀")
+  terminal.writeln("")
+  terminal.writeln("Repository: https://github.com/mdobydullah/obydul.me")
   terminal.prompt()
 }
