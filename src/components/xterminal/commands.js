@@ -9,15 +9,13 @@ export let commands = {
     f: (terminal) => commandHelp(terminal),
     description: 'Print available commands',
   },
-  // ls: {
-  //   f: (terminal) => {
-  //     Object.keys(commands).forEach(key => {
-  //       terminal.writeln(key)
-  //     });
-  //     terminal.prompt()
-  //   },
-  //   description: 'Print available commands'
-  // },
+  "ctrl+c": {
+    f: (terminal) => {
+      terminal.write('^C');
+      terminal.prompt()
+    },
+    description: 'Cancel the current command'
+  },
   clear: {
     f: (terminal) => {
       terminal.reset()
