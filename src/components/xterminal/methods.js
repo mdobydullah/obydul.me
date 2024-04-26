@@ -37,6 +37,14 @@ export function commandProjects(terminal) {
       name: 'Shouts.dev',
       description: `A dev community and blogging platform. ${link('https://shouts.dev', '[live preview]')}`,
     },
+    laraSkrill: {
+      name: 'LaraSkrill',
+      description: `A Laravel package for Skrill payment gateway. Used in 540+ projects. ${link('https://github.com/mdobydullah/laraskrill', '[repository]')}`,
+    },
+    realEmailVerify: {
+      name: 'Real Email Verify',
+      description: `Verify real email address by checking the domain name and MX record without sending email. ${link('https://github.com/mdobydullah/real-email-verify', '[repository]')}`,
+    },
   }
 
   terminal.writeln("My remarkable projects:\r\n")
