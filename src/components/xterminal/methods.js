@@ -62,6 +62,24 @@ export function commandHelp(terminal) {
   terminal.prompt()
 }
 
+export function commandSocial(terminal) {
+  let socialLinks = {
+    'Twitter': 'https://x.com/0xObydul',
+    'GitHub': 'https://github.com/mdobydullah',
+    'LinkedIn': 'https://www.linkedin.com/in/obydul',
+    'YouTube': 'https://www.youtube.com/@AnyxelBn',
+    'ADPList': 'https://adplist.org/mentors/md-obydullah',
+    'More': 'https://bio.link/obydul',
+  };
+
+  terminal.writeln("You can follow me on social media.\r\n")
+  Object.entries(socialLinks).forEach(([name, url]) => {
+    terminal.writeln(`• ${name}: \x1b]8;;${url}\x07${url}\x1b]8;;\x07`)
+  })
+
+  terminal.prompt()
+}
+
 export function commandAbout(terminal) {
   terminal.writeln(`${color('yellow', 'Md Obydullah')} is a software engineer, server administrator, ethical hacker and enthusiastic problem solver🚀  from Bangladesh.`)
   terminal.writeln(`He is currently working at \x1b]8;;https://www.electronicfirst.com\x07Electronic First\x1b]8;;\x07 as a ${color('green', 'Senior Software Engineer')}.`)

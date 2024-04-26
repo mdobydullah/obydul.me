@@ -1,4 +1,4 @@
-import {commandAbout, commandHelp, userInfo} from './methods.js';
+import {commandAbout, commandHelp, commandSocial, userInfo} from './methods.js';
 
 export let commands = {
   help: {
@@ -25,6 +25,13 @@ export let commands = {
       terminal.prompt()
     },
     description: 'Clear the terminal'
+  },
+  '': {
+    description: ' ',
+  },
+  social: {
+    f: (terminal) => commandSocial(terminal),
+    description: 'Social media links',
   },
   about: {
     f: (terminal) => commandAbout(terminal),
