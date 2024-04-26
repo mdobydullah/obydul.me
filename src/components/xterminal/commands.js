@@ -29,6 +29,10 @@ export let commands = {
   gap1: {
     description: ' ',
   },
+  projects: {
+    f: (terminal) => commandSocial(terminal),
+    description: 'Projects I have worked on',
+  },
   social: {
     f: (terminal) => commandSocial(terminal),
     description: 'Social media links',

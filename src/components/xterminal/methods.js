@@ -7,6 +7,8 @@ export function color(color, text) {
   if (color === 'green') code = 32;
   if (color === 'yellow') code = 33;
   if (color === 'blue') code = 34;
+  if (color === 'magenta') code = 35;
+  if (color === 'cyan') code = 36;
 
   return `\x1B[${code};1m${text}\x1B[0m`;
 }
@@ -16,48 +18,9 @@ export function userInfo() {
 }
 
 export function commandHelp(terminal) {
-  const padding = 10;
-
-  function formatMessage(name, description) {
-    const maxLength = terminal.cols - padding - 3;
-    let remaining = description;
-    const d = [];
-    while (remaining.length > 0) {
-      // Trim any spaces left over from the previous line
-      remaining = remaining.trimStart();
-      // Check if the remaining text fits
-      if (remaining.length < maxLength) {
-        d.push(remaining);
-        remaining = '';
-      } else {
-        let splitIndex = -1;
-        // Check if the remaining line wraps already
-        if (remaining[maxLength] === ' ') {
-          splitIndex = maxLength;
-        } else {
-          // Find the last space to use as the split index
-          for (let i = maxLength - 1; i >= 0; i--) {
-            if (remaining[i] === ' ') {
-              splitIndex = i;
-              break;
-            }
-          }
-        }
-        d.push(remaining.substring(0, splitIndex));
-        remaining = remaining.substring(splitIndex);
-      }
-    }
-
-    // if name contains string "gap", then replace with space
-    if (name.includes('gap')) {
-      name = "";
-    }
-
-    const message = (
-      `  \x1b[36;1m${name.padEnd(padding)}\x1b[0m ${d[0]}` +
-      d.slice(1).map(e => `\r\n  ${' '.repeat(padding)} ${e}`)
-    );
-    return message;
+  const formatMessage = (command, description) => {
+    let name = command.includes('gap') ? "" : command;
+    return `  ${color('cyan', name.padEnd(10))} ${description}`;
   }
 
   terminal.writeln([
@@ -78,9 +41,13 @@ export function commandSocial(terminal) {
     'More': 'https://bio.link/obydul',
   };
 
+  const formatMessage = (name, url) => {
+    return `  ${color('blue', name.padEnd(10))} ${url}`;
+  }
+
   terminal.writeln("You can follow me on social media.\r\n")
   Object.entries(socialLinks).forEach(([name, url]) => {
-    terminal.writeln(`• ${name}: \x1b]8;;${url}\x07${url}\x1b]8;;\x07`)
+    terminal.writeln(formatMessage(name, url))
   })
 
   terminal.prompt()
