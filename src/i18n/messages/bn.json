@@ -1,0 +1,43 @@
+{
+  "nav": {
+    "home": "হোম",
+    "projects": "প্রজেক্ট",
+    "writing": "লেখা",
+    "timeline": "টাইমলাইন",
+    "contact": "যোগাযোগ",
+    "resume": "জীবনবৃত্তান্ত"
+  },
+  "actions": {
+    "viewWork": "কাজ দেখুন",
+    "getInTouch": "যোগাযোগ করুন",
+    "downloadResume": "জীবনবৃত্তান্ত ডাউনলোড",
+    "readMore": "আরও পড়ুন",
+    "back": "ফিরুন",
+    "copyEmail": "ইমেইল কপি",
+    "copied": "কপি হয়েছে"
+  },
+  "theme": {
+    "toggle": "থিম পরিবর্তন",
+    "light": "লাইট",
+    "dark": "ডার্ক",
+    "system": "সিস্টেম"
+  },
+  "language": {
+    "label": "ভাষা",
+    "english": "ইংরেজি",
+    "arabic": "আরবি",
+    "bengali": "বাংলা"
+  },
+  "hero": {
+    "greeting": "হ্যালো, আমি",
+    "status": "AI · LLMs চর্চা করছি",
+    "viewProjects": "প্রজেক্ট দেখুন"
+  },
+  "sections": {
+    "highlights": "উল্লেখযোগ্য",
+    "featuredWork": "নির্বাচিত কাজ",
+    "experience": "অভিজ্ঞতা",
+    "skills": "দক্ষতা",
+    "writing": "লেখা"
+  }
+}

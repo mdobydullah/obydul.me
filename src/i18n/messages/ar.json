@@ -1,0 +1,43 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "projects": "المشاريع",
+    "writing": "المقالات",
+    "timeline": "الخط الزمني",
+    "contact": "تواصل",
+    "resume": "السيرة الذاتية"
+  },
+  "actions": {
+    "viewWork": "عرض الأعمال",
+    "getInTouch": "تواصل معي",
+    "downloadResume": "تحميل السيرة الذاتية",
+    "readMore": "اقرأ المزيد",
+    "back": "رجوع",
+    "copyEmail": "نسخ البريد",
+    "copied": "تم النسخ"
+  },
+  "theme": {
+    "toggle": "تبديل المظهر",
+    "light": "فاتح",
+    "dark": "داكن",
+    "system": "النظام"
+  },
+  "language": {
+    "label": "اللغة",
+    "english": "الإنجليزية",
+    "arabic": "العربية",
+    "bengali": "البنغالية"
+  },
+  "hero": {
+    "greeting": "مرحبًا، أنا",
+    "status": "ممارسة الذكاء الاصطناعي · LLMs",
+    "viewProjects": "عرض المشاريع"
+  },
+  "sections": {
+    "highlights": "أبرز الإنجازات",
+    "featuredWork": "أعمال مختارة",
+    "experience": "الخبرات",
+    "skills": "المهارات",
+    "writing": "المقالات"
+  }
+}

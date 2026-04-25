@@ -1,0 +1,43 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "writing": "Writing",
+    "timeline": "Timeline",
+    "contact": "Contact",
+    "resume": "Resume"
+  },
+  "actions": {
+    "viewWork": "View work",
+    "getInTouch": "Get in touch",
+    "downloadResume": "Download résumé",
+    "readMore": "Read more",
+    "back": "Back",
+    "copyEmail": "Copy email",
+    "copied": "Copied"
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "language": {
+    "label": "Language",
+    "english": "English",
+    "arabic": "Arabic",
+    "bengali": "Bengali"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "status": "Deep in AI · LLMs",
+    "viewProjects": "View projects"
+  },
+  "sections": {
+    "highlights": "Highlights",
+    "featuredWork": "Featured work",
+    "experience": "Experience",
+    "skills": "Skills",
+    "writing": "Writing"
+  }
+}
