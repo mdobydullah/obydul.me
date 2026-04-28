@@ -3,6 +3,7 @@
     "home": "الرئيسية",
     "projects": "المشاريع",
     "writing": "المقالات",
+    "stories": "قصص",
     "timeline": "الخط الزمني",
     "contact": "تواصل",
     "resume": "السيرة الذاتية"
@@ -35,7 +36,7 @@
   },
   "sections": {
     "highlights": "أبرز الإنجازات",
-    "featuredWork": "أعمال مختارة",
+    "stories": "قصص",
     "experience": "الخبرات",
     "skills": "المهارات",
     "writing": "المقالات"

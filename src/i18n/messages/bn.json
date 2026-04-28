@@ -3,6 +3,7 @@
     "home": "হোম",
     "projects": "প্রজেক্ট",
     "writing": "লেখা",
+    "stories": "গল্প",
     "timeline": "টাইমলাইন",
     "contact": "যোগাযোগ",
     "resume": "জীবনবৃত্তান্ত"
@@ -35,7 +36,7 @@
   },
   "sections": {
     "highlights": "উল্লেখযোগ্য",
-    "featuredWork": "নির্বাচিত কাজ",
+    "stories": "গল্প",
     "experience": "অভিজ্ঞতা",
     "skills": "দক্ষতা",
     "writing": "লেখা"

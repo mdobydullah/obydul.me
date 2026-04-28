@@ -85,7 +85,7 @@ Body is markdown. Supports `:::row` (2-column layout for diagrams), `:::stats` (
 
 Sort: by `launch_date` descending. Home page shows featured items first.
 
-### 3. Writing — `content/case-studies/*.md`
+### 3. Writing — `content/writing/*.md`
 
 War stories, hacking writeups, narrative pieces. Same markdown extensions as projects.
 
@@ -170,7 +170,7 @@ src/
 │   └── messages/
 ├── lib/
 │   ├── projects.ts      project loader + sort + featured filter
-│   ├── case-studies.ts  writing loader
+│   ├── writing.ts       writing loader
 │   ├── profile.ts       career-hub profile loader (sanitized)
 │   ├── project-links.ts auto-link injector for resume bullets
 │   ├── anonymize.ts     EF/project-name normalizer
@@ -181,7 +181,7 @@ src/
 content/
 ├── resume.ts            structured CV
 ├── projects/*.md        portfolio items
-├── case-studies/*.md    writing
+├── writing/*.md         writing
 ├── profile/*.md         synced from career-hub
 └── timeline.ts          career timeline entries
 scripts/

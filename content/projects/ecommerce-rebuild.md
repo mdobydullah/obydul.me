@@ -5,14 +5,14 @@ year: "2019"
 launch_date: "2019-01-01"
 role: "Solo build, then team lead"
 status: "Live"
-stack: ["Laravel", "NestJS", "Next.js", "PHP", "Blade (legacy)"]
+stack: ["Laravel", "Blade", "Next.js (planned)"]
 tags: ["fullstack", "migration", "laravel"]
 metrics:
   - "Migration ran ~1 year with WordPress and Laravel in parallel"
   - "Zero-data-loss cutover"
   - "Now serves the entire customer base"
 github: ""
-live: "https://electronicfirst.com"
+live: "https://www.electronicfirst.com"
 ---
 
 ## Context
@@ -34,15 +34,14 @@ A full Laravel rebuild. Solo. Migrated incrementally.
 
 - **Parallel run:** kept WordPress live for ~1 year while Laravel grew. Routed traffic feature-by-feature.
 - **Rewrote business logic in proper services**, not plugins
-- **Today's stack** has evolved: Laravel + NestJS for backend services, Next.js for the customer-facing frontend, Blade still around as legacy
+- **Today's stack** has evolved: Laravel + Go microservices.
 
 ### Stack
 
 - Laravel (primary)
-- NestJS (newer services)
-- Next.js (frontend)
-- Blade templates (legacy paths)
-- MySQL on AWS RDS
+- Blade templates
+- Go microservices
+- AWS
 
 ## Outcome
 
@@ -63,8 +62,8 @@ flowchart TB
 ```mermaid
 flowchart TB
   title["✓ After · today"]
-  L[Laravel core] --> NS[NestJS services]
-  NS --> NX[Next.js frontend]
+  L[Laravel core] --> NS[Balde frontend]
+  NS --> NX[Next.js frontend - planned]
   NX --> ST2[Storefront]
   L --> GO[Go microservices]
   style title fill:transparent,stroke:transparent

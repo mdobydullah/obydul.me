@@ -107,7 +107,7 @@ Loader: `src/lib/projects.ts`. Listed on `/projects`, rendered at `/projects/[sl
 
 ### 3. Writing / war stories — local Markdown
 
-Path: `content/case-studies/*.md` (or `.mdx`).
+Path: `content/writing/*.md` (or `.mdx`).
 
 Frontmatter shape:
 
@@ -122,7 +122,7 @@ featured: true
 ---
 ```
 
-Loader: `src/lib/case-studies.ts`. Listed on `/work` (the user calls it "Writing" in the nav), rendered at `/work/[slug]`. Use these for war stories, hacking writeups, personal narratives — the _story_ of solving something, not the _spec_ of what was built. **These live in this repo**, not in career-hub.
+Loader: `src/lib/writing.ts`. Listed on `/writing`, rendered at `/writing/[slug]`. Use these for war stories, hacking writeups, personal narratives — the _story_ of solving something, not the _spec_ of what was built. **These live in this repo**, not in career-hub.
 
 **Difference from projects:** projects = portfolio item ("here's what I shipped"), writing = narrative ("here's how it broke at 3am"). A given EF service might have a project page _and_ a war-story page about the day it caught fire.
 
@@ -174,7 +174,7 @@ User-facing copy in this repo (hero, section intros, button text, descriptions, 
 - Allow mild opinion — "I care about what works, not what looks good in a deck" reads as a person, not a brand.
 - Read the line aloud. If it sounds like a LinkedIn bio or a SaaS landing page, rewrite it.
 
-**Scope:** these rules apply to copy _I write_ in `src/`, message files (`src/i18n/messages/*.json`), and component literals. Do not edit `content/profile/*.md` to enforce these — that's the user's own writing, synced from career-hub. Same for `content/case-studies/*.md` once the user populates them.
+**Scope:** these rules apply to copy _I write_ in `src/`, message files (`src/i18n/messages/*.json`), and component literals. Do not edit `content/profile/*.md` to enforce these — that's the user's own writing, synced from career-hub. Same for `content/writing/*.md` once the user populates them.
 
 ## Git commits
 

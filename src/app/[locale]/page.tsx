@@ -11,7 +11,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { HeroPanel } from "@/components/hero-panel";
-import { listCaseStudies } from "@/lib/case-studies";
+import { listWriting } from "@/lib/writing";
 import { listFeaturedProjects } from "@/lib/projects";
 import { SITE } from "@/lib/site";
 
@@ -25,7 +25,7 @@ export default async function HomePage({
   const t = await getTranslations();
 
   const projects = listFeaturedProjects(3);
-  const cases = listCaseStudies().slice(0, 3);
+  const cases = listWriting().slice(0, 3);
 
   return (
     <>
@@ -137,12 +137,12 @@ export default async function HomePage({
 
         <section className="py-16 sm:py-20">
           <div className="flex flex-col items-center text-center">
-            <Eyebrow>◆ {t("sections.featuredWork")}</Eyebrow>
+            <Eyebrow>◆ {t("sections.stories")}</Eyebrow>
             <h2 className="display mt-5 text-3xl sm:text-4xl">
-              Real problems, real numbers.
+              Stories from Real Systems
             </h2>
             <p className="mono-body text-muted-foreground mt-4 max-w-md">
-              War stories from production. The constraint, the call, the result.
+              Outages, breaches, weird bugs, and what they taught me.
             </p>
           </div>
           {cases.length === 0 ? (

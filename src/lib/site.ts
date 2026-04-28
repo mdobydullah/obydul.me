@@ -5,9 +5,10 @@ export const SITE = {
   email: "hi@obydul.me",
   github: "https://github.com/mdobydullah",
   linkedin: "https://www.linkedin.com/in/mdobydullah/",
-  twitter: "https://x.com/mdobydullah",
+  twitter: "https://x.com/0xObydul",
   whatsapp: "",
   role: "Senior Software Engineer",
+  homepageTitle: "Software Engineer, Cyber Security Researcher",
   location: "Remote · Worldwide",
   pitch:
     "9+ years shipping production systems. Lately I'm wiring AI into real products. I care about what works, not what looks good in a deck.",

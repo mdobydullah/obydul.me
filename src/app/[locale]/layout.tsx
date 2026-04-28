@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   },
   description: SITE.pitch,
   openGraph: {
-    title: `${SITE.name} | ${SITE.role}`,
+    title: `${SITE.name} | ${SITE.homepageTitle}`,
     description: SITE.pitch,
     url: SITE.url,
     siteName: SITE.name,

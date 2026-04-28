@@ -4,11 +4,11 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Badge, Eyebrow } from "@/components/ui/badge";
 import { MermaidProvider } from "@/components/mermaid-provider";
-import { getCaseStudy, listCaseStudies } from "@/lib/case-studies";
+import { getWriting, listWriting } from "@/lib/writing";
 import { mdToHtml } from "@/lib/md";
 
 export async function generateStaticParams() {
-  return listCaseStudies().map((c) => ({ slug: c.slug }));
+  return listWriting().map((c) => ({ slug: c.slug }));
 }
 
 export async function generateMetadata({
@@ -17,7 +17,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const study = getCaseStudy(slug);
+  const study = getWriting(slug);
   if (!study) return {};
   return {
     title: study.title,
@@ -34,7 +34,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function CaseStudyPage({
+export default async function WritingPage({
   params,
 }: {
   params: Promise<{ locale: string; slug: string }>;
@@ -42,7 +42,7 @@ export default async function CaseStudyPage({
   const { locale, slug } = await params;
   setRequestLocale(locale);
   const t = await getTranslations();
-  const study = getCaseStudy(slug);
+  const study = getWriting(slug);
   if (!study) notFound();
 
   const html = mdToHtml(study.content);

@@ -11,6 +11,11 @@ function inline(s: string): string {
   r = r.replace(/`([^`]+)`/g, "<code>$1</code>");
   r = r.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
   r = r.replace(/(?<!\*)\*([^*]+)\*(?!\*)/g, "<em>$1</em>");
+  r = r.replace(
+    /!\[([^\]]*)\]\(([^)]+)\)/g,
+    (_, alt, src) =>
+      `<img src="${src}" alt="${alt}" loading="lazy" class="md-img" />`,
+  );
   r = r.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, text, href) => {
     const isExternal = /^https?:\/\//.test(href);
     const attrs = isExternal ? ' target="_blank" rel="noreferrer"' : "";

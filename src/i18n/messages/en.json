@@ -3,6 +3,7 @@
     "home": "Home",
     "projects": "Projects",
     "writing": "Writing",
+    "stories": "Stories",
     "timeline": "Timeline",
     "contact": "Contact",
     "resume": "Resume"
@@ -35,7 +36,7 @@
   },
   "sections": {
     "highlights": "Highlights",
-    "featuredWork": "Featured work",
+    "stories": "Stories",
     "experience": "Experience",
     "skills": "Skills",
     "writing": "Writing"

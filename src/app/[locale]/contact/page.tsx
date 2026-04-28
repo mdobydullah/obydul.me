@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { ArrowUpRight, MailIcon } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Eyebrow } from "@/components/ui/badge";
-import { GithubIcon, LinkedinIcon } from "@/components/icons/social";
+import { GithubIcon, LinkedinIcon, XIcon } from "@/components/icons/social";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: `Open to senior software and AI engineering roles. Email ${SITE.email} or reach out on LinkedIn.`,
+  description: `Email ${SITE.email} or reach out on LinkedIn.`,
 };
 
 export default async function ContactPage({
@@ -20,9 +20,10 @@ export default async function ContactPage({
   const t = await getTranslations();
 
   const links = [
-    { icon: MailIcon, label: SITE.email, href: `mailto:${SITE.email}` },
     { icon: LinkedinIcon, label: "LinkedIn", href: SITE.linkedin },
     { icon: GithubIcon, label: "GitHub", href: SITE.github },
+    { icon: XIcon, label: "X", href: SITE.twitter },
+    { icon: MailIcon, label: SITE.email, href: `mailto:${SITE.email}` },
   ];
 
   return (
@@ -32,8 +33,7 @@ export default async function ContactPage({
         Let&apos;s <span className="headline-gradient">talk</span>.
       </h1>
       <p className="mono-body text-muted-foreground mt-5 max-w-xl">
-        Open to senior software and AI engineering roles. Fastest reply by email
-        or LinkedIn.
+        Fastest reply by email or LinkedIn.
       </p>
       <ul className="mt-10 space-y-3">
         {links.map(({ icon: Icon, label, href }) => (

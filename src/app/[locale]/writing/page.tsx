@@ -10,12 +10,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { listCaseStudies } from "@/lib/case-studies";
+import { listWriting } from "@/lib/writing";
 
 export const metadata: Metadata = {
   title: "Writing",
   description:
-    "War stories, hacking writeups, and notes from production. The story of solving things, not just the spec.",
+    "Stories from real systems. Outages, breaches, weird bugs, and what they taught me.",
 };
 
 export default async function WorkPage({
@@ -26,25 +26,25 @@ export default async function WorkPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations();
-  const cases = listCaseStudies();
+  const cases = listWriting();
 
   return (
     <div className="font-prose mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
       <div className="text-center">
-        <Eyebrow>◆ {t("nav.work")}</Eyebrow>
+        <Eyebrow>◆ {t("nav.stories")}</Eyebrow>
         <h1 className="display mt-5 text-4xl sm:text-5xl md:text-6xl">
-          Things I&apos;ve <span className="headline-gradient">shipped</span>.
+          Stories from <span className="headline-gradient">Real Systems</span>
         </h1>
         <p className="mono-body text-muted-foreground mx-auto mt-5 max-w-lg">
-          Real problems, the constraints, what shipped, and the numbers.
+          Outages, breaches, weird bugs, and what they taught me.
         </p>
       </div>
 
       {cases.length === 0 ? (
         <p className="text-muted-foreground mt-16 text-center font-mono text-sm">
-          Case studies coming soon. Add Markdown files to{" "}
+          Writing coming soon. Add Markdown files to{" "}
           <code className="bg-muted rounded px-1.5 py-0.5">
-            content/case-studies/
+            content/writing/
           </code>
           .
         </p>
