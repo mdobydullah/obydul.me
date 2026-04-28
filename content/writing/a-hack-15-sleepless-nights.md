@@ -62,7 +62,7 @@ In reality, I was buying time.
 
 I was observing their behavior, testing how they still had access, and trying to understand the attack path.
 
-At one point, I changed passwords and then asked them, “Can you tell me what my password is now?”
+At one point, I changed the database password in the `.env` file and asked them, “Can you tell me what my password is now?”
 
 To my surprise, they instantly replied with the new password.
 
