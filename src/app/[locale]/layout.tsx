@@ -6,6 +6,7 @@ import {
   Instrument_Serif,
   Outfit,
 } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -104,6 +105,9 @@ export default async function LocaleLayout({
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>
+      {process.env.NODE_ENV === "production" ? (
+        <GoogleAnalytics gaId={SITE.gaId} />
+      ) : null}
     </html>
   );
 }

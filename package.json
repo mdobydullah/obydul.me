@@ -15,6 +15,7 @@
     "sync-profile": "node scripts/sync-profile.mjs"
   },
   "dependencies": {
+    "@next/third-parties": "^16.2.4",
     "@radix-ui/react-dropdown-menu": "^2.1.16",
     "@radix-ui/react-slot": "^1.2.4",
     "class-variance-authority": "^0.7.1",

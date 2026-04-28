@@ -15,4 +15,5 @@ export const SITE = {
   oneLiner:
     "Senior software engineer. I ship software that has to stay up when real users hit it.",
   cv: "/cv/obydul-cv.pdf",
+  gaId: "G-LT3YTFNYSV",
 } as const;
