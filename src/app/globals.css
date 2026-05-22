@@ -268,9 +268,8 @@ body {
     background: #ffffff !important;
     color: #0a0a0a !important;
   }
-  header[role="banner"],
-  nav,
-  footer,
+  [data-site-nav],
+  [data-site-footer],
   .print\:hidden {
     display: none !important;
   }

@@ -225,7 +225,7 @@ function Section({
   inline?: boolean;
 }) {
   return (
-    <section className={inline ? "" : "mt-10 break-inside-avoid print:mt-6"}>
+    <section className={inline ? "" : "mt-10 print:mt-6"}>
       <h2 className="text-muted-foreground font-mono text-[0.7rem] tracking-[0.18em] uppercase print:text-[10px]">
         {title}
       </h2>

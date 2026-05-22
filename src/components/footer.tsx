@@ -11,7 +11,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="border-border mt-24 border-t">
+    <footer data-site-footer className="border-border mt-24 border-t">
       <div className="text-muted-foreground mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-5 py-8 font-mono text-xs sm:flex-row sm:items-center sm:px-8">
         <p>
           © {year} {SITE.name}
